@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js for loops</title>
+</head>
+
+<body>
+    <script>
+        //For the given JSON iterate over all for loops (for, for in, for of, forEach)?
+        
+        var jsonData = [
+                { "one": "11, 12, 13, 14, 15"},
+                { "two": "21, 22, 23" },
+                { "three": "31, 32", "four": "43, 44, 45"},
+            ];
+        //for loop 
+        for (var i = 0; i < jsonData.length; i++) {
+            //for in loop
+            for (var key in jsonData[i]) {
+                console.log(jsonData[i][key]);
+            }
+        }
+
+        var cars = [{name: 'Benz'}, {name: 'Audi'}, {name: 'BMW'}];
+        //for of loop
+        for (var car of cars) {
+            console.log(`${car.name}`);
+        }
+
+        //forEach
+        var obj = {
+            name: "John",
+            age: 23
+        };
+        Object.keys(obj).forEach((key) => {
+            console.log(key +': '+ obj[key]);
+        });
+
+        //Create your own resume data in JSON format?
+        let myData = { "firstname": "mohammed", "lastname": "siddique",  "place": "chennai", "qualification": "bca"};
+        console.log(`name: ${myData.firstname} ${myData.lastname}, place: ${myData.place}, qualification: ${myData.qualification}`);
+    </script>
+</body>
+</html>
